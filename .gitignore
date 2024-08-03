@@ -1,0 +1,36 @@
+# Ignore .vscode settings folder
+.vscode/
+
+# Ignore build files
+build/
+
+# Ignore log files
+*.log
+
+# Ignore pictures
+data/img/
+
+# Ignore the users' data
+data/users.json
+
+# Ignore binary and object files
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.lib
+*.so
+*.dll
+
+# Ignore CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+Makefile
+CMakeLists.txt.user
+
+# Ignore editor backup files
+*~
+*.swp
