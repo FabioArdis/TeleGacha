@@ -38,7 +38,28 @@ std::string UserManager::getName(const std::string& userId)
 }
 
 void UserManager::loadAllUsers() {
+
     std::ifstream inFile("../data/users.json");
+
+    std::filesystem::path filePath("../data/users.json");
+
+    if (!std::filesystem::exists(filePath.parent_path()))
+    {
+        std::filesystem::create_directories(filePath.parent_path());
+    }
+
+    if (!inFile) {
+        std::ofstream outFile("../data/users.json");
+
+        if (outFile) {
+            outFile << "{}";
+            outFile.close();
+            inFile.open("../data/users.json");
+        } else {
+            return;
+        }
+    }
+
     if (inFile) {
         nlohmann::json j;
         inFile >> j;

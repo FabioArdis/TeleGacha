@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <chrono>
 #include <optional>
+#include <filesystem>
 #include "GameUser.hpp"
 
 class UserManager {
